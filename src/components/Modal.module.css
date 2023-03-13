@@ -14,7 +14,7 @@
 @media (max-width: 500px) {
   .modalBackground {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 25px;
   }
 }
 
