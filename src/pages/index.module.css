@@ -32,14 +32,31 @@
   transform: translateX(-220px) rotate(3deg);
 }
 
+.actionsContainer {
+  position: absolute;
+  bottom: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 500px) {
+  .container {
+    height: 720px;
+  }
+
   .invitation {
     width: 400px;
-    transform: translateX(-200px) rotate(3deg);
+    transform: translateX(-200px);
   }
 
   .envelope {
     width: 603px;
     transform: translate(-342px) rotate(-75deg);
+  }
+
+  .actionsContainer {
+    bottom: 50px;
   }
 }

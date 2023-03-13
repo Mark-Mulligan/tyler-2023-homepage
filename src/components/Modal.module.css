@@ -1,0 +1,60 @@
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 10;
+  overflow: auto;
+}
+
+@media (max-width: 500px) {
+  .modalBackground {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.modal {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(54, 176, 48, 0.85);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: rgb(200, 200, 200);
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.characterList {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.characterList li {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}

@@ -2,9 +2,16 @@
 import styles from './index.module.css';
 import { type NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+
+// React
+import { useState } from 'react';
+
+// Components
+import Modal from '../components/Modal';
 
 const Home: NextPage = () => {
+  const [showList, setShowList] = useState(false);
+
   return (
     <>
       <Head>
@@ -16,7 +23,23 @@ const Home: NextPage = () => {
         <div className={styles.container}>
           <img className={styles.envelope} src="envelope.png" alt="invitation" />
           <img className={styles.invitation} src="invitation.png" alt="invitation" />
+          <div className={styles.actionsContainer}>
+            <a
+              className="btn"
+              style={{ marginRight: '2rem' }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeYJRaFMLTp3vzaNNBqprd-SG5G4lPLBr8I0COvKwW5vsm_yA/viewform?usp=sf_link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              RSVP
+            </a>
+            <button className="btn" onClick={() => setShowList(true)}>
+              View List
+            </button>
+          </div>
         </div>
+
+        {showList && <Modal handleClose={() => setShowList(false)} />}
       </main>
     </>
   );

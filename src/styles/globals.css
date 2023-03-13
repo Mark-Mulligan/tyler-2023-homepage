@@ -1,9 +1,18 @@
+@font-face {
+  font-family: 'MainFont';
+  src: url('./SuperMarioWorldTextBoxRegular-Y86j.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TitleFont';
+  src: url('./TypefaceMario64-ywA93.otf') format('opentype');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+  font-family: 'MainFont';
 }
 
 a {
@@ -13,4 +22,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'TitleFont';
+  padding: 10px 1rem;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+.btn:hover {
+  background: yellow;
 }
