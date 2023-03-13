@@ -1,5 +1,5 @@
 // React
-import { FC } from 'react';
+import { type FC } from 'react';
 
 // Styles
 import styles from './Modal.module.css';
