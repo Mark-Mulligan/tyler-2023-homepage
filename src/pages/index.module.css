@@ -47,8 +47,10 @@
   }
 
   .invitation {
-    width: 400px;
+    width: calc(100% - 20px);
+    max-width: 400px;
     transform: translateX(-200px);
+    transform: translateX(calc(-50%));
   }
 
   .envelope {
@@ -58,5 +60,16 @@
 
   .actionsContainer {
     bottom: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .envelope {
+    width: 150%;
+    transform: translate(-56%) rotate(-75deg);
+  }
+
+  .actionsContainer {
+    bottom: calc(470px - 100vw);
   }
 }

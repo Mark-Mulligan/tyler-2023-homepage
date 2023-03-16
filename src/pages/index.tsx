@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <img className={styles.envelope} src="envelope-min.png" alt="invitation" />
+          <img className={styles.envelope} src="envelope-min.png" alt="envelope" />
           <img className={styles.invitation} src="invitation-min.jpg" alt="invitation" />
           <div className={styles.actionsContainer}>
             <a
