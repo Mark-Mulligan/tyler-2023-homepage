@@ -28,7 +28,7 @@ const Modal: FC<IProps> = ({ handleClose }) => {
           <li>Dry Bones - William</li>
           <li>Koopa - Travis</li>
           <li>Dixie Kong - Stefanee</li>
-          <li> Daisy - Chelsea </li>
+          <li>Daisy - Chelsea</li>
           <li>Shy Guy - Geoffrey</li>
           <li>Rosalina - Macklemore</li>
           <li>Donkey Kong - Marklemore</li>
@@ -36,7 +36,7 @@ const Modal: FC<IProps> = ({ handleClose }) => {
           <li>Waluigi - Casey</li>
           <li>Pauline - Ronnie</li>
           <li>Piranha Plant - Conner</li>
-          <li>TBD - Kelsey</li>
+          <li>King Boo - Kelsey</li>
           <li>TBD - Tayler BreAnn</li>
         </ul>
       </div>
