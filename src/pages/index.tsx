@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           <img className={styles.envelope} src="envelope-min.png" alt="envelope" />
           <img className={styles.invitation} src="invitation-min.jpg" alt="invitation" />
           <div className={styles.actionsContainer}>
-            <a
+            {/* <a
               className="btn"
               style={{ marginRight: '2rem' }}
               href="https://docs.google.com/forms/d/e/1FAIpQLSeYJRaFMLTp3vzaNNBqprd-SG5G4lPLBr8I0COvKwW5vsm_yA/viewform?usp=sf_link"
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
               rel="noreferrer"
             >
               RSVP
-            </a>
+            </a> */}
             <button className="btn" onClick={() => setShowList(true)}>
               View List
             </button>

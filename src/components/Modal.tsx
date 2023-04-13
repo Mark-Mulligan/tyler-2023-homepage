@@ -20,7 +20,7 @@ const Modal: FC<IProps> = ({ handleClose }) => {
           <li>Mario - Mark</li>
           <li>Luigi - Tyler</li>
           <li>Peach - Kahlan </li>
-          <li> Toad - Marco</li>
+          <li>Toad - Marco</li>
           <li>Toadette - Rachel</li>
           <li> Bowser - Faris</li>
           <li>Birdo - Dani</li>
@@ -36,8 +36,6 @@ const Modal: FC<IProps> = ({ handleClose }) => {
           <li>Waluigi - Casey</li>
           <li>Pauline - Ronnie</li>
           <li>Piranha Plant - Conner</li>
-          <li>King Boo - Kelsey</li>
-          <li>TBD - Tayler BreAnn</li>
         </ul>
       </div>
     </div>
