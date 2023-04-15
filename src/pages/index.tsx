@@ -4,13 +4,53 @@ import { type NextPage } from 'next';
 import Head from 'next/head';
 
 // React
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components
 import Modal from '../components/Modal';
 
+function countdownTo515() {
+  // Create Date object for current time
+  const now: any = new Date();
+
+  // Create Date object for 5:15pm today
+  const target: any = new Date('April 15, 2023 17:15:00');
+
+  // Calculate difference in seconds between now and target time
+  const diff = Math.round((target - now) / 1000);
+  return diff;
+}
+
+function secondsToTimeString(seconds: number) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60;
+
+  const hoursString = String(hours).padStart(2, '0');
+  const minutesString = String(minutes).padStart(2, '0');
+  const secondsString = String(remainingSeconds).padStart(2, '0');
+
+  return `${hoursString}:${minutesString}:${secondsString}`;
+}
+
 const Home: NextPage = () => {
   const [showList, setShowList] = useState(false);
+
+  const [timeToScavengerHunt, setTimeToScavengerHunt] = useState(1);
+
+  useEffect(() => {
+    setTimeToScavengerHunt(countdownTo515());
+
+    const countdown = setInterval(() => {
+      setTimeToScavengerHunt(countdownTo515());
+    }, 1000);
+
+    return () => {
+      clearInterval(countdown);
+    };
+  }, []);
+
+  // const [timeBeforeShowingHint, setTimeBeforeShowingHint] = useState(120);
 
   return (
     <>
@@ -33,15 +73,22 @@ const Home: NextPage = () => {
           <img className={styles.envelope} src="envelope-min.png" alt="envelope" />
           <img className={styles.invitation} src="invitation-min.jpg" alt="invitation" />
           <div className={styles.actionsContainer}>
-            {/* <a
-              className="btn"
-              style={{ marginRight: '2rem' }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeYJRaFMLTp3vzaNNBqprd-SG5G4lPLBr8I0COvKwW5vsm_yA/viewform?usp=sf_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              RSVP
-            </a> */}
+            {timeToScavengerHunt > 0 ? (
+              <div style={{ marginBottom: '1rem', maxWidth: 300, background: 'rgba(255, 255, 255, 0.9)', padding: 5 }}>
+                Scavenger Hunt starts in {secondsToTimeString(timeToScavengerHunt)}
+              </div>
+            ) : (
+              <a
+                className="btn"
+                style={{ marginBottom: '1rem' }}
+                href="https://scavenger-hunt-2023.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Scavenger Hunt
+              </a>
+            )}
+
             <button className="btn" onClick={() => setShowList(true)}>
               View List
             </button>
